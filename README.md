@@ -5,11 +5,12 @@
 <h3> INCLUDES: </h3>
 
 - <b> webpack </b>
-  - <b> HMR </b>! (Hot Module Replacement)
 - <b> typescript </b>
 - <b> react 18+ </b>
+- <b> node 18+ </b>
 - <b> sass </b>
-- <b> SEO w/ SSR </b>
+- <b> live-reloading </b>
+- <b> seo w/ ssr </b>
 
 <hr />
 
