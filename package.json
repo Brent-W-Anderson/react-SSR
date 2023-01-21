@@ -10,7 +10,7 @@
         "build:server": "webpack --config server/webpack.config.server.js",
         "build:client": "webpack --config client/webpack.config.client.js",
         "start:dev": "concurrently --kill-others \"node webpack.config.dev.js\" \"yarn watch\"",
-        "start": "start http://localhost:3001/ & node ./dist/server.js",
-        "watch": "nodemon --watch ./client/* --ext *"
+        "start": "node ./dist/server.js",
+        "watch": "concurrently \"start http://localhost:3001/\" \"nodemon --watch ./client/* --ext *\""
     }
 }
