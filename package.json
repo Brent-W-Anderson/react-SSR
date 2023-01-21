@@ -1,0 +1,16 @@
+{
+    "name": "react-ssr",
+    "version": "1.0.0",
+    "scripts": {
+        "initialize:all": "yarn setup:all & yarn build:all & yarn start:dev",
+        "setup:all": "yarn setup:devDependencies & yarn setup:dependencies",
+        "setup:devDependencies": "yarn add @types/connect-livereload @types/cross-spawn @types/express @types/livereload @types/node @types/react @types/react-dom clean-webpack-plugin concurrently connect-livereload copy-webpack-plugin cross-spawn css-loader ignore-loader livereload nodemon sass sass-loader style-loader ts-loader typescript webpack webpack-cli webpack-manifest-plugin webpack-node-externals --dev",
+        "setup:dependencies": "yarn add ejs express react react-dom",
+        "build:all": "yarn build:server & yarn build:client",
+        "build:server": "webpack --config server/webpack.config.server.js",
+        "build:client": "webpack --config client/webpack.config.client.js",
+        "start:dev": "concurrently --kill-others \"node webpack.config.dev.js\" \"yarn watch\"",
+        "start": "start http://localhost:3001/ & node ./dist/server.js",
+        "watch": "nodemon --watch ./client/* --ext *"
+    }
+}
